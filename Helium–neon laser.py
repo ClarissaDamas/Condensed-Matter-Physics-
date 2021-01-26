@@ -6,7 +6,6 @@ class HeNe_laser:
         self.power = power
         self.color = color
         self.Spectral_width = Spectral_width
-        self.
 
 class red(HeNe_laser):
     def __init__(self,transition,lifetime,power,GHz,α)
