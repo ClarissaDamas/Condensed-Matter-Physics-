@@ -1,10 +1,10 @@
-#Condensed Matter(Physics)
+##Condensed Matter(Physics)
 
 A solid is said to be a crystal if atoms are arranged in such a way that their positions are exactly periodic, if we replace each atom by a geometrical point located at the equilibrium position of that atom, we obtain a crystal lattice. Classifying all possible crystal structures is too complex, so to describe a lattice we usually consider Bravais Lattice(in three dimensions, there are 14 distinct Bravais lattices).
 
-This project returns the type of Bravais lattices based on your data about the axes and angles.
+This project returns the type of Bravais lattices based on your data about the axes and angles.Image about Bravais Lattices:
 
-![Image about Bravais Lattices](/bravaisLatticesJava/img/ThebravaisLattices.png)
+![](/bravaisLatticesJava/img/ThebravaisLattices.png)
 
 ## Requirements
 * Java programming language
@@ -16,7 +16,9 @@ This project returns the type of Bravais lattices based on your data about the a
 * You should choose the options according to your data about axes and angles.
 * Click on the button to receive your system result,you are free to try as many times as you need to.
 
-![Image from Condensed Matter Project](/bravaisLatticesJava/img/JavaGraphicalUserInterface.png)
+Image from Condensed Matter Project:
+
+![](/bravaisLatticesJava/img/JavaGraphicalUserInterface.png)
 
 ## Roadmap
 The project is going to have updates releases in the future.More Physics related projects and go deep with the calculation of the current one.
