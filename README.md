@@ -4,7 +4,7 @@ A solid is said to be a crystal if atoms are arranged in such a way that their p
 
 This project returns the type of Bravais lattices based on your data about the axes and angles.
 
-![](/bravaisLatticesJava/img/ThebravaisLattices.png)
+![Image about Bravais Lattices](/bravaisLatticesJava/img/ThebravaisLattices.png)
 
 ## Requirements
 * Java programming language
@@ -16,7 +16,7 @@ This project returns the type of Bravais lattices based on your data about the a
 * You should choose the options according to your data about axes and angles.
 * Click on the button to receive your system result,you are free to try as many times as you need to.
 
-![](/bravaisLatticesJava/img/JavaGraphicalUserInterface.png)
+![Image from Condensed Matter Project](/bravaisLatticesJava/img/JavaGraphicalUserInterface.png)
 
 ## Roadmap
 The project is going to have updates releases in the future.More Physics related projects and go deep with the calculation of the current one.
