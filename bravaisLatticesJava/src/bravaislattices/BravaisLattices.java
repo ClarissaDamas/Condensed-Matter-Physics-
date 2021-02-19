@@ -35,7 +35,6 @@ public class BravaisLattices extends javax.swing.JFrame {
         labelAlpha = new javax.swing.JLabel();
         labelBeta = new javax.swing.JLabel();
         labelA3 = new javax.swing.JLabel();
-        buttonType = new javax.swing.JButton();
         sliderA1 = new javax.swing.JSlider();
         sliderA2 = new javax.swing.JSlider();
         sliderA3 = new javax.swing.JSlider();
@@ -44,12 +43,14 @@ public class BravaisLattices extends javax.swing.JFrame {
         labelA2 = new javax.swing.JLabel();
         painelAnswer = new javax.swing.JPanel();
         labelAnswer = new javax.swing.JLabel();
+        lblimage = new javax.swing.JLabel();
         labelStringalpha = new javax.swing.JLabel();
         labelStringbeta = new javax.swing.JLabel();
         labelStringgama = new javax.swing.JLabel();
         labelStringa1 = new javax.swing.JLabel();
         labelStringa2 = new javax.swing.JLabel();
         labelStringa3 = new javax.swing.JLabel();
+        buttonType = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -85,13 +86,6 @@ public class BravaisLattices extends javax.swing.JFrame {
         labelBeta.setText("β");
 
         labelA3.setText("a3");
-
-        buttonType.setText("What type of bravais lattices parameters :");
-        buttonType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonTypeActionPerformed(evt);
-            }
-        });
 
         sliderA1.setMaximum(360);
         sliderA1.setValue(0);
@@ -130,21 +124,30 @@ public class BravaisLattices extends javax.swing.JFrame {
         labelAnswer.setToolTipText("");
         labelAnswer.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/CondensedMatterImages.png"))); // NOI18N
+
         javax.swing.GroupLayout painelAnswerLayout = new javax.swing.GroupLayout(painelAnswer);
         painelAnswer.setLayout(painelAnswerLayout);
         painelAnswerLayout.setHorizontalGroup(
             painelAnswerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelAnswerLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelAnswerLayout.createSequentialGroup()
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(lblimage, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
         );
         painelAnswerLayout.setVerticalGroup(
             painelAnswerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelAnswerLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGroup(painelAnswerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelAnswerLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(lblimage, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelAnswerLayout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(labelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         labelStringalpha.setText("90");
@@ -159,6 +162,13 @@ public class BravaisLattices extends javax.swing.JFrame {
 
         labelStringa3.setText("0");
 
+        buttonType.setText("What type of bravais lattices parameters :");
+        buttonType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonTypeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -168,50 +178,52 @@ public class BravaisLattices extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(labelAlpha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(labelBeta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(labelGama1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(labelAlpha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelBeta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(labelGama1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sliderAlpha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(sliderBeta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(sliderGama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelA1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sliderA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(labelA2)
+                                    .addComponent(labelA3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sliderA3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(sliderA2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sliderAlpha, javax.swing.GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
-                            .addComponent(sliderBeta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(sliderGama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(labelStringalpha)
+                            .addComponent(labelStringbeta)
+                            .addComponent(labelStringgama)
+                            .addComponent(labelStringa1)
+                            .addComponent(labelStringa2)
+                            .addComponent(labelStringa3)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelA1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sliderA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelA2)
-                            .addComponent(labelA3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sliderA3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(sliderA2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelStringalpha)
-                    .addComponent(labelStringbeta)
-                    .addComponent(labelStringgama)
-                    .addComponent(labelStringa1)
-                    .addComponent(labelStringa2)
-                    .addComponent(labelStringa3))
-                .addGap(74, 74, 74))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(buttonType))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(painelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addComponent(painelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(174, 174, 174)
+                                .addComponent(buttonType)))
+                        .addGap(0, 42, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addContainerGap(59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -246,14 +258,14 @@ public class BravaisLattices extends javax.swing.JFrame {
                     .addComponent(sliderA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelA3)
                     .addComponent(labelStringa3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
                 .addComponent(buttonType)
-                .addGap(18, 18, 18)
-                .addComponent(painelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(painelAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(697, 750));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTypeActionPerformed
@@ -269,28 +281,35 @@ public class BravaisLattices extends javax.swing.JFrame {
                 
         if (alpha==90&&beta==90&&gama==90){
             if (a1==a2&&a2==a3){
-            labelAnswer.setText("Cubic");
+            labelAnswer.setText("Cubic");         
+            lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/Cubic.png")));
             }
             else if (a1==a2&&a2!=a3) {
             labelAnswer.setText("Tetragonal");
+            lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/Tetragonal.png")));
             }
             else if (a1!=a2&&a2!=a3&&a1!=a3) {
-            labelAnswer.setText("Orthorhombic");
+            labelAnswer.setText("Orthorombic");
+            lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/Orthorombic.png")));
             }        
         }
           else if (alpha==90&&beta==90&&gama!=90){
             if (a1==a2&&a2==a3){
             labelAnswer.setText("<html>Rhombohedral or Trigonal<html>");
+            lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/CondensedMatterImages.png")));
             }
             else if (a1==a2&&a2!=a3){
             labelAnswer.setText("Hexagonal");
+            lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/Hexagonal.png")));
             }
             else if (a1!=a2&&a2!=a3){
             labelAnswer.setText("Monoclinic");
+            lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/Monoclinic.png")));
             }
           }
         else if (alpha!=beta&&gama!=90){
             labelAnswer.setText("Triclinic");
+            lblimage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CondensedMatterIcons/Triclinic.png")));
             }
     }//GEN-LAST:event_buttonTypeActionPerformed
 
@@ -376,6 +395,7 @@ public class BravaisLattices extends javax.swing.JFrame {
     private javax.swing.JLabel labelStringalpha;
     private javax.swing.JLabel labelStringbeta;
     private javax.swing.JLabel labelStringgama;
+    private javax.swing.JLabel lblimage;
     private javax.swing.JPanel painelAnswer;
     private javax.swing.JSlider sliderA1;
     private javax.swing.JSlider sliderA2;
